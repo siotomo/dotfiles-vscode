@@ -1,16 +1,8 @@
 {
-  // workbench(vscodeのUI)
-  "workbench.editor.pinnedTabSizing": "compact",
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.sideBar.location": "right",
-  "workbench.tree.indent": 16,
-  "workbench.colorCustomizations": {
-    "editorCursor.foreground": "#999",
-    "editor.lineHighlightBackground": "#151515",
-    // "editorLineNumber.foreground": "#111115"
-  },
-  // editor(コード修正関係の基本機能)
+  // ================================
+  // 基本的なエディタ設定
+  // ================================
+  "editor.fontSize": 12,
   "editor.tabSize": 2,
   "editor.wordWrap": "off",
   "editor.renderControlCharacters": false,
@@ -19,122 +11,180 @@
   "editor.suggestSelection": "first",
   "editor.acceptSuggestionOnEnter": "on",
   "editor.fontFamily": "RictyDiminishedForPowerline-Regular",
-  "editor.tokenColorCustomizations": {
-    "comments": "#999",
-  },
   "editor.cursorWidth": 3,
   "editor.cursorBlinking": "phase",
   "editor.minimap.enabled": false,
-
-  // files
+  "editor.tokenColorCustomizations": {
+    "comments": "#999"
+  },
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.rulers": [
+    120
+  ],
+  "editor.semanticHighlighting.enabled": true,
+  // ================================
+  // ファイル管理
+  // ================================
   "files.autoSave": "afterDelay",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  // "files.trimTrailingWhitespace": true,
   "files.eol": "\n",
   "files.exclude": {
-    "**/.git": false,
-    "**/.svn": false,
-    "**/.hg": false,
-    "**/CVS": false,
-    "**/.DS_Store": false
-},
-
-  // explore
+    "**/.git": false
+  },
+  // ================================
+  // ワークベンチとUIのカスタマイズ
+  // ================================
+  "workbench.colorTheme": "Spinel",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.sideBar.location": "right",
+  "workbench.tree.indent": 16,
+  "workbench.statusBar.visible": false,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#999",
+    "editor.lineHighlightBackground": "#151515"
+  },
+  // ================================
+  // エクスプローラとファイルナビゲーション
+  // ================================
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
-
-  // frontend(js/ts)
-  "eslint.packageManager": "yarn",
+  "explorer.confirmDelete": false,
+  // ================================
+  // JavaScript/TypeScript設定
+  // ================================
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.enablePromptUseWorkspaceTsdk": true,
+  // ================================
+  // セキュリティ設定
+  // ================================
 
-  // jsonコメント
+  "security.confirmOpenExternal": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  // ================================
+  // Git関連
+  // ================================
+  "git.autofetch": true,
+  "gitmoji.customEmoji": true,
+  // 絵文字
+  "gitmoji.customEmojiMap": [
+    {
+      "emoji": "🐛",
+      "colon": ":bug:",
+      "text": "バグ修正"
+    },
+    {
+      "emoji": "👍",
+      "colon": ":+1:",
+      "text": "機能改善"
+    },
+    {
+      "emoji": "✨",
+      "colon": ":sparkles:",
+      "text": "部分的な機能追加"
+    },
+    {
+      "emoji": "🎨",
+      "colon": ":art:",
+      "text": "デザイン変更のみ"
+    },
+    {
+      "emoji": "💢",
+      "colon": ":anger:",
+      "text": "コンフリクト"
+    },
+    {
+      "emoji": "🚧",
+      "colon": ":construction:",
+      "text": "WIP"
+    },
+    {
+      "emoji": "📝",
+      "colon": ":memo:",
+      "text": "文言修正"
+    },
+    {
+      "emoji": "♻",
+      "colon": ":recycle:",
+      "text": "リファクタリング"
+    },
+    {
+      "emoji": "🔥",
+      "colon": ":fire:",
+      "text": "不要な機能・使われなくなった機能の削除"
+    },
+    {
+      "emoji": "💚",
+      "colon": ":green_heart:",
+      "text": "テストやCIの修正・改善"
+    },
+    {
+      "emoji": "👕",
+      "colon": ":shirt:",
+      "text": "Lintエラーの修正やコードスタイルの修正"
+    },
+    {
+      "emoji": "🚀",
+      "colon": ":rocket:",
+      "text": "パフォーマンス改善"
+    },
+    {
+      "emoji": "🆙",
+      "colon": ":up:",
+      "text": "依存パッケージなどのアップデート"
+    },
+    {
+      "emoji": "👮",
+      "colon": ":cop:",
+      "text": "セキュリティ関連の改善"
+    },
+    {
+      "emoji": "⚙",
+      "colon": ":gear:",
+      "text": "config変更"
+    },
+    {
+      "emoji": "📚",
+      "colon": ":books:",
+      "text": "ドキュメント"
+    }
+  ],
+  // ================================
+  // 言語固有の設定
+  // ================================
   "[jsonc]": {
     "editor.quickSuggestions": {
       "strings": true
     },
     "editor.suggest.insertMode": "replace"
   },
-
-  // errorLens
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true
+  },
+  "ruby.useLanguageServer": true,
+  "ruby.intellisense": "rubyLocate",
+  // ================================
+  // その他の設定
+  // ================================
   "errorLens.enabledDiagnosticLevels": [
     "warning",
     "info",
     "error"
   ],
   "errorLens.delay": 20000,
-
-  // seccurity
-  "security.confirmOpenExternal": false,
-
-  // Git
-  "git.autofetch": true,
-  // "git.openRepositoryInParentFolders": "always",
-
-  // その他
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "explorer.confirmDelete": false,
   "terminal.integrated.enableMultiLinePasteWarning": false,
-
-  // rubyのsolargraph
-  "ruby.useLanguageServer": true, // LSPでrubyのコード解析を事前にすることで定義元のpeekやcodejumpなどが行えるようになる
-  "ruby.intellisense": "rubyLocate",
-
-  // "[dart]": {
-  //   "editor.formatOnSave": true,
-  //   "editor.formatOnType": true,
-  //   "editor.rulers": [
-  //     80
-  //   ],
-  //   "editor.selectionHighlight": false,
-  //   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  //   "editor.suggestSelection": "first",
-  //   "editor.tabCompletion": "onlySnippets",
-  //   "editor.wordBasedSuggestions": false
-  // },
-  "dart.openDevTools": "flutter",
+  "eslint.packageManager": "yarn",
   "diffEditor.ignoreTrimWhitespace": false,
   "javascript.suggest.includeAutomaticOptionalChainCompletions": false,
-  "workbench.statusBar.visible": false,
-  "security.workspace.trust.untrustedFiles": "open",
-
-  // 絵文字
-  "gitmoji.customEmojiMap": [
-    {"emoji": "🐛",  "colon": ":bug:", "text": "バグ修正"},
-    {"emoji": "👍",  "colon": ":+1:", "text": "機能改善"},
-    {"emoji": "✨", "colon":  ":sparkles:", "text": "部分的な機能追加"},
-    {"emoji": "🎨",  "colon": ":art:", "text": "デザイン変更のみ"},
-    {"emoji": "💢",  "colon": ":anger:", "text": "コンフリクト"},
-    {"emoji": "🚧",  "colon": ":construction:", "text": "WIP"},
-    {"emoji": "📝",  "colon": ":memo:", "text": "文言修正"},
-    {"emoji": "♻", "colon": ":recycle:", "text": "リファクタリング"},
-    {"emoji": "🔥",  "colon": ":fire:", "text": "不要な機能・使われなくなった機能の削除"},
-    {"emoji": "💚",  "colon": ":green_heart:", "text": "テストやCIの修正・改善"},
-    {"emoji": "👕",  "colon": ":shirt:", "text": "Lintエラーの修正やコードスタイルの修正"},
-    {"emoji": "🚀",  "colon": ":rocket:", "text": "パフォーマンス改善"},
-    {"emoji": "🆙",  "colon": ":up:", "text": "依存パッケージなどのアップデート"},
-    {"emoji": "👮",  "colon": ":cop:", "text": "セキュリティ関連の改善"},
-    {"emoji": "⚙" , "colon": ":gear:", "text": "config変更"},
-    {"emoji": "📚",  "colon": ":books:", "text": "ドキュメント"}
-],
-"gitmoji.customEmoji": true,
-"workbench.editor.enablePreview": false,
-"editor.fontSize": 12,
-"[ruby]": {
-  "editor.defaultFormatter": "Shopify.ruby-lsp",
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "editor.rulers": [
-    120
-  ],
-  "editor.semanticHighlighting.enabled": true
-},
-"workbench.colorTheme": "Spinel"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "dart.openDevTools": "flutter"
 }
