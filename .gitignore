@@ -7,3 +7,4 @@
 # 監視対象とするファイルを随時追加する
 !settings.json
 !keybindings.json
+!README.MD

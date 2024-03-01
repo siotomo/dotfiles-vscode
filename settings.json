@@ -64,7 +64,6 @@
   // ================================
   // セキュリティ設定
   // ================================
-
   "security.confirmOpenExternal": false,
   "security.workspace.trust.untrustedFiles": "open",
   // ================================
@@ -186,5 +185,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "javascript.suggest.includeAutomaticOptionalChainCompletions": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "dart.openDevTools": "flutter"
+  "dart.openDevTools": "flutter",
+  "window.zoomLevel": 2
 }
