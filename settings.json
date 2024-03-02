@@ -7,7 +7,6 @@
   "editor.wordWrap": "off",
   "editor.renderControlCharacters": false,
   "editor.renderLineHighlight": "all",
-  "editor.renderWhitespace": "all",
   "editor.suggestSelection": "first",
   "editor.acceptSuggestionOnEnter": "on",
   "editor.fontFamily": "RictyDiminishedForPowerline-Regular",
@@ -20,10 +19,8 @@
   "editor.insertSpaces": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "editor.rulers": [
-    80 // 一行が長すぎないかの一確認するために入れても良い
-  ],
   "editor.semanticHighlighting.enabled": true,
+  "editor.stickyScroll.enabled": true,
   // ================================
   // ファイル管理
   // ================================
@@ -32,7 +29,7 @@
   "files.trimFinalNewlines": true,
   "files.eol": "\n",
   "files.exclude": {
-    "**/.git": false
+    "**/*": false // 全てのファイルを表示する
   },
   // ================================
   // ワークベンチとUIのカスタマイズ
@@ -49,12 +46,18 @@
     "editorCursor.foreground": "#999",
     "editor.lineHighlightBackground": "#151515"
   },
+  "workbench.layoutControl.enabled": false,
   // ================================
   // エクスプローラとファイルナビゲーション
   // ================================
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
+  // ================================
+  // UI その他
+  // ================================
+  "window.commandCenter": false,
+  "breadcrumbs.enabled": false,
   // ================================
   // JavaScript/TypeScript設定
   // ================================
@@ -181,8 +184,5 @@
   "errorLens.delay": 20000,
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "eslint.packageManager": "yarn",
-  "diffEditor.ignoreTrimWhitespace": false,
-  "javascript.suggest.includeAutomaticOptionalChainCompletions": false,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "dart.openDevTools": "flutter"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
