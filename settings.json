@@ -11,8 +11,8 @@
   "editor.suggestSelection": "first",
   "editor.acceptSuggestionOnEnter": "on",
   "editor.fontFamily": "RictyDiminishedForPowerline-Regular",
-  "editor.cursorWidth": 3,
-  "editor.cursorBlinking": "phase",
+  "editor.cursorWidth": 10,
+  // "editor.cursorBlinking": "phase",
   "editor.minimap.enabled": false,
   "editor.tokenColorCustomizations": {
     "comments": "#999"
@@ -21,7 +21,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.rulers": [
-    120
+    80 // 一行が長すぎないかの一確認するために入れても良い
   ],
   "editor.semanticHighlighting.enabled": true,
   // ================================
@@ -164,7 +164,6 @@
     "editor.suggest.insertMode": "replace"
   },
   "[ruby]": {
-    "editor.defaultFormatter": "Shopify.ruby-lsp",
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true
@@ -185,6 +184,5 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "javascript.suggest.includeAutomaticOptionalChainCompletions": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "dart.openDevTools": "flutter",
-  "window.zoomLevel": 2
+  "dart.openDevTools": "flutter"
 }
