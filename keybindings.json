@@ -1,5 +1,7 @@
 [
-  // リスト操作
+  // =====================
+  // リスト操作(何かを選択しているとき)
+  // =====================
   {
     "key": "ctrl+n",
     "command": "list.focusDown",
@@ -20,7 +22,7 @@
     "command": "list.select",
     "when": "listFocus && !inputFocus"
   },
-  // エクスプローラーのナビゲーション
+  // エクスプローラー(ファイル探索時)のナビゲーション
   {
     "key": "right",
     "command": "explorer.openAndPassFocus",
@@ -36,18 +38,22 @@
     "command": "nextCompressedFolder",
     "when": "explorerViewletCompressedFocus && explorerViewletVisible && filesExplorerFocus && !explorerViewletCompressedLastFocus && !inputFocus"
   },
+  // =====================
   // エディタ操作
+  // =====================
   {
     "key": "ctrl+j",
-    "command": "editor.action.addSelectionToNextFindMatch",
+    "command": "editor.action.addSelectionToNextFindMatch", // カーソルが当たってる単語全体を選択
     "when": "editorFocus"
   },
   {
     "key": "ctrl+u",
-    "command": "cursorUndo",
+    "command": "cursorUndo", // 直前のカーソル位置に戻る
     "when": "textInputFocus"
   },
+  // =====================
   // 検索中のコマンド when: editorFocus && findInputFocussed
+  // =====================
   {
     "key": "ctrl+f",
     "command": "editor.action.nextMatchFindAction",
@@ -63,7 +69,9 @@
     "command": "editor.action.previousMatchFindAction",
     "when": "editorFocus && findInputFocussed"
   },
+  // =====================
   // カーソル操作
+  // =====================
   {
     "key": "shift+alt+right",
     "command": "cursorWordEndRightSelect",
@@ -72,25 +80,6 @@
   {
     "key": "ctrl+shift+f",
     "command": "cursorRightSelect",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "alt+right",
-    "command": "cursorWordStartRight"
-  },
-  {
-    "key": "alt+left",
-    "command": "cursorWordLeft",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "right",
-    "command": "cursorRight",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "left",
-    "command": "cursorLeft",
     "when": "textInputFocus"
   },
   // クリップボード操作
@@ -102,21 +91,28 @@
     "key": "ctrl+v",
     "command": "editor.action.clipboardPasteAction"
   },
-  // 定義と参照
+  // =====================
+  // 定義元をpeek, move to
+  // =====================
   {
     "key": "ctrl+o",
-    "command": "editor.action.goToDeclaration"
+    "command": "editor.action.goToDeclaration" //move to
   },
   {
     "key": "ctrl+i",
-    "command": "editor.action.peekDefinition",
+    "command": "editor.action.peekDefinition", // peek
     "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
-  // その他
+  // =====================
+  // タブ操作
+  // =====================
   {
     "key": "ctrl+q",
-    "command": "workbench.action.closeOtherEditors"
+    "command": "workbench.action.closeOtherEditors" // タブ一括削除
   },
+  // =====================
+  // やり直し
+  // =====================
   {
     "key": "ctrl+z",
     "command": "undo"
@@ -125,4 +121,19 @@
     "key": "ctrl+shift+z",
     "command": "redo"
   },
+  // =====================
+  // 対象のシンボルに移動
+  // =====================
+  {
+    "key": "ctrl+g",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "ctrl+g",
+    "command": "-workbench.action.gotoLine"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "-workbench.action.gotoSymbol"
+  }
 ]
