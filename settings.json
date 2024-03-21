@@ -17,8 +17,8 @@
     "comments": "#999"
   },
   "editor.insertSpaces": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
   "editor.semanticHighlighting.enabled": true,
   "editor.stickyScroll.enabled": true,
   // ================================
@@ -169,7 +169,16 @@
   "[ruby]": {
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true
+    "files.trimFinalNewlines": true,
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.rulers": [
+      120
+    ],
+    "editor.semanticHighlighting.enabled": true
   },
   "ruby.useLanguageServer": true,
   "ruby.intellisense": "rubyLocate",
