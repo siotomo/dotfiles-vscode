@@ -35,9 +35,9 @@
   // ワークベンチとUIのカスタマイズ
   // ================================
   "workbench.colorTheme": "Spinel",
-  "workbench.editor.enablePreview": false,
   "workbench.editor.pinnedTabSizing": "compact",
   "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.enablePreview": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.sideBar.location": "right",
   "workbench.tree.indent": 16,
